@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using KSP.Localization;
 using System.Linq;
+using KSP;
+using KSP.UI;
 using TMPro;
 
 namespace PolishTranslation
@@ -10,11 +12,16 @@ namespace PolishTranslation
     {
         public void Awake()
         {
-            FontLoader fontLoader = FindObjectOfType<FontLoader>();
-            TMP_FontAsset fontAsset = fontLoader.LoadedFonts.FirstOrDefault(t => t.name.Equals("JD-LCD-PL-modified"));
-            fontLoader.AddMenuSubFont("pl", false, new[] { fontAsset });
-            fontLoader.SwitchFontLanguage("pl");
-            Localizer.SwitchToLanguage("pl");
+            if (Application.isPlaying)
+            {
+                FontLoader fontLoader = FindObjectOfType<FontLoader>();
+                TMP_FontAsset fontAsset = fontLoader.LoadedFonts.FirstOrDefault(t => t.name.Equals("JD-LCD-PL-modified"));
+                fontLoader.AddMenuSubFont("pl", false, new[] { fontAsset });
+                fontLoader.SwitchFontLanguage("pl");
+
+                Localizer.SwitchToLanguage("pl");
+              
+            }
         }
     }
 }
