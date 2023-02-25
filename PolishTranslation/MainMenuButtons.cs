@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 namespace PolishTranslation
 {
-    [KSPAddon(KSPAddon.Startup.AllGameScenes, false)]
+    [KSPAddon(KSPAddon.Startup.AllGameScenes, true)]
     public class MainMenuButtons : MonoBehaviour
     {
         private const string url = "https://forum.kerbalspaceprogram.com/index.php?/topic/212193-1125-kerbal-space-program-polish-translation-v091-beta/";
