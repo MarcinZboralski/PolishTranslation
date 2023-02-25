@@ -1,4 +1,4 @@
-PolishTranslation v0.92 Initial Version
+PolishTranslation v0.93
 -All in-game text has been translated outside of KSPedia
 
 Known Issues: 

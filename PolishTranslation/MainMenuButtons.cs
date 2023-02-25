@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 namespace PolishTranslation
 {
-    [KSPAddon(KSPAddon.Startup.MainMenu, true)]
+    [KSPAddon(KSPAddon.Startup.AllGameScenes, false)]
     public class MainMenuButtons : MonoBehaviour
     {
         private const string url = "https://forum.kerbalspaceprogram.com/index.php?/topic/212193-1125-kerbal-space-program-polish-translation-v091-beta/";
@@ -29,7 +29,7 @@ namespace PolishTranslation
                     OpenForumURL, null,
                     null, null,
                     null, null,
-                    ApplicationLauncher.AppScenes.MAINMENU,
+                    ApplicationLauncher.AppScenes.ALWAYS,
                     ToolbarButtonTexture
                 );
 
